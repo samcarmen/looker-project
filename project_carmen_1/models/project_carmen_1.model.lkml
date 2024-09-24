@@ -26,4 +26,13 @@ persist_with: project_carmen_1_default_datagroup
 # Typically, join parameters require that you define the join type, join relationship, and a sql_on clause.
 # Each joined view also needs to define a primary key.
 
-explore: employee {}
+explore: employee {
+  required_access_grants: [data_engineering_access]
+}
+
+explore: program {}
+
+access_grant: data_engineering_access {
+  user_attribute: department
+  allowed_values: ["data_engineering"]
+}
