@@ -1,5 +1,5 @@
 # Define the database connection to be used for this model.
-connection: "sandbox_testing_2"
+connection: "test_sandbox_connection"
 
 # include all the views
 include: "/project_carmen_2/views/**/*.view.lkml"
@@ -19,7 +19,7 @@ persist_with: project_carmen_2_default_datagroup
 # fields available to users for data analysis.
 # Explores should be purpose-built for specific use cases.
 
-# To see the Explore you’re building, navigate to the Explore menu and select an Explore under "Project Carmen 2"
+# To see the Explore you’re building, navigate to the Explore menu and select an Explore under "Project Carmen 1"
 
 # To create more sophisticated Explores that involve multiple views, you can use the join parameter.
 # Typically, join parameters require that you define the join type, join relationship, and a sql_on clause.
