@@ -1,5 +1,5 @@
 # Define the database connection to be used for this model.
-connection: "sandbox_testing_2"
+connection: "test_sandbox_connection"
 
 # include all the views
 include: "/project_carmen_2/views/**/*.view.lkml"
