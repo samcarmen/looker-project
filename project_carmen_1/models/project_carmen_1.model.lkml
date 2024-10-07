@@ -1,6 +1,6 @@
 # Define the database connection to be used for this model.
 # connection: "test_connection_carmen"
-connection: "@{connection_name}"
+connection: "test_connection_carmen"
 
 # include all the views
 include: "/project_carmen_1/views/**/*.view.lkml"
@@ -28,6 +28,10 @@ persist_with: project_carmen_1_default_datagroup
 
 explore: employee {
   required_access_grants: [data_engineering_access]
+  access_filter: {
+    field: employee.company_id  # Fully scoped field name
+    user_attribute: company_id    # The user attribute you created
+  }
 }
 
 explore: program {}
