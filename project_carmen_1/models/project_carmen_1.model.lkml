@@ -28,10 +28,10 @@ persist_with: project_carmen_1_default_datagroup
 
 explore: employee {
   required_access_grants: [data_engineering_access]
-  access_filter: {
-    field: employee.company_id  # Fully scoped field name
-    user_attribute: company_id    # The user attribute you created
-  }
+  # access_filter: {
+  #   field: employee.company_id
+  #   user_attribute: company_id
+  # }
 }
 
 explore: program {}
