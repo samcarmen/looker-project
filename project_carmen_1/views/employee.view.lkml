@@ -2,7 +2,7 @@
 view: employee {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `{{ _user_attributes['db_connection'] }}.talent_management_sg.employee` ;;
+  sql_table_name: `talent_management_sg.employee` ;;
   drill_fields: [manager_employee_id]
 
   # This primary key is the unique key for this table in the underlying database.
