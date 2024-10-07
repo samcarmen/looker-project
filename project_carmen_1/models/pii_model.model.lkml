@@ -26,7 +26,7 @@ persist_with: project_carmen_1_default_datagroup
 # Each joined view also needs to define a primary key.
 
 explore: employee {
-  required_access_grants: [data_engineering_access]
+  required_access_grants: [pii_access]
   # access_filter: {
   #   field: employee.company_id
   #   user_attribute: company_id
@@ -35,7 +35,7 @@ explore: employee {
 
 explore: program {}
 
-access_grant: data_engineering_access {
-  user_attribute: department
-  allowed_values: ["data_engineering"]
+access_grant: pii_access {
+  user_attribute: pii_access
+  allowed_values: ["true"]
 }
