@@ -1,5 +1,5 @@
 # Define the database connection to be used for this model.
-connection: "sandbox_testing_2"
+connection: "bigquery_production"
 
 # include all the views
 include: "/project_carmen_1/views/**/*.view.lkml"
