@@ -1,5 +1,4 @@
 # Define the database connection to be used for this model.
-# connection: "test_connection_carmen"
 connection: "bigquery_production"
 
 # include all the views
