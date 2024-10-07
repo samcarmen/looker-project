@@ -2,7 +2,7 @@
 view: employee {
   # The sql_table_name parameter indicates the underlying database table
   # to be used for all fields in this view.
-  sql_table_name: `talent_management_sg.employee` ;;
+  sql_table_name: `{{ _user_attributes['custom_schema'] }}.talent_management_sg.employee` ;;
   drill_fields: [manager_employee_id]
 
   # This primary key is the unique key for this table in the underlying database.
@@ -215,18 +215,18 @@ view: employee {
   # ----- Sets of fields for drilling ------
   set: detail {
     fields: [
-	manager_employee_id,
-	first_name,
-	last_name,
-	employee_action_history.count,
-	employee_score.count,
-	employee_course_activity.count,
-	employee_questionnaire.count,
-	employee_group_member.count,
-	employee_task.count,
-	learning_goal.count,
-	participant.count
-	]
+  manager_employee_id,
+  first_name,
+  last_name,
+  employee_action_history.count,
+  employee_score.count,
+  employee_course_activity.count,
+  employee_questionnaire.count,
+  employee_group_member.count,
+  employee_task.count,
+  learning_goal.count,
+  participant.count
+  ]
   }
 
 }
