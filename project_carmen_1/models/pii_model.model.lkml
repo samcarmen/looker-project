@@ -1,5 +1,5 @@
 # Define the database connection to be used for this model.
-connection: "bigquery_production"
+connection: "sandbox_testing_2"
 
 # include all the views
 include: "/project_carmen_1/views/**/*.view.lkml"
@@ -34,6 +34,8 @@ explore: employee {
 }
 
 explore: program {}
+
+explore: candidate_sg_job_application {}
 
 access_grant: pii_access {
   user_attribute: pii_access

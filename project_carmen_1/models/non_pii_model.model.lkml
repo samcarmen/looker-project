@@ -1,5 +1,4 @@
 # Define the database connection to be used for this model.
-# connection: "test_connection_carmen"
 connection: "test_connection_carmen"
 
 # include all the views
@@ -35,6 +34,8 @@ explore: employee {
 }
 
 explore: program {}
+
+explore: candidate_sg_job_application {}
 
 access_grant: pii_access {
   user_attribute: pii_access
