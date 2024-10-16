@@ -1,5 +1,5 @@
 # Define the database connection to be used for this model.
-connection: "test_connection_carmen"
+connection: "bigquery_sandbox"
 
 # include all the views
 include: "/project_carmen_1/views/**/*.view.lkml"
@@ -26,8 +26,6 @@ persist_with: project_carmen_1_default_datagroup
 # Each joined view also needs to define a primary key.
 
 explore: employee {
-  required_access_grants: [pii_access]
-
   # access_filter: {
   #   field: employee.company_id
   #   user_attribute: company_id
@@ -36,11 +34,9 @@ explore: employee {
 
 explore: program {}
 
-explore: candidate_sg_job_application {
-  fields: [ALL_FIELDS*, -candidate_sg_job_application.first_name]
-}
+explore: candidate_sg_job_application {}
 
 access_grant: pii_access {
-  user_attribute: pii_access
+  user_attribute: can_access_pii
   allowed_values: ["true"]
 }

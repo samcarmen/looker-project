@@ -89,6 +89,7 @@ view: candidate_sg_job_application {
   }
 
   dimension: first_name {
+    required_access_grants: [pii_access]
     type: string
     description: "The first name of candidate. Default as \"Profile\" in anonymous integration mode (eg. SAP). Max 255 characters."
     sql: ${TABLE}.first_name ;;
