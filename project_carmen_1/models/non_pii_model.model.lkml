@@ -35,7 +35,9 @@ explore: employee {
 
 explore: program {}
 
-explore: candidate_sg_job_application {}
+explore: candidate_sg_job_application {
+  fields: [ALL_FIELDS*, -candidate_sg_job_application.first_name]
+}
 
 access_grant: pii_access {
   user_attribute: pii_access
