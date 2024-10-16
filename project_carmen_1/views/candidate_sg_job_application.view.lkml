@@ -178,6 +178,7 @@ view: candidate_sg_job_application {
   }
 
   dimension: last_name {
+    required_access_grants: [pii_access]
     type: string
     description: "The last name of candidate. Default as SAP Application ID in anonymous integration mode (eg. SAP). Max 255 characters."
     sql: ${TABLE}.last_name ;;
