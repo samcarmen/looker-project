@@ -27,6 +27,7 @@ persist_with: project_carmen_1_default_datagroup
 
 explore: employee {
   required_access_grants: [pii_access]
+
   # access_filter: {
   #   field: employee.company_id
   #   user_attribute: company_id
@@ -35,7 +36,9 @@ explore: employee {
 
 explore: program {}
 
-explore: candidate_sg_job_application {}
+explore: candidate_sg_job_application {
+  fields: [ALL_FIELDS*, -candidate_sg_job_application.first_name]
+}
 
 access_grant: pii_access {
   user_attribute: pii_access
